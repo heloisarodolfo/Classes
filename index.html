@@ -8,6 +8,52 @@
 </head>
 <body>
     <script>
+class pessoa{
+    constructor(nome,idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    falar() {
+        console.log(`Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos`);
+    }
+}
+
+let pessoa1 = new pessoa("dudinha", 17);
+pessoa1.falar();
+let pessoa2 = new pessoa("Basso", 20);
+pessoa2.falar();
+    </script>
+///////////////// 
+    <script>
+function pessoa(nome, idade) {
+ this.nome = nome;
+ this.idade = idade;   
+}
+
+pessoa.prototype.falar = function () {
+    console.log(`Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos`);
+};
+
+let pessoa1 = new pessoa("heloisa", 17);
+pessoa1.falar(); 
+let pessoa1 = new pessoa("Vitinho", 19);
+pessoa1.falar(); 
+    </script>
+    /////////////////////
+
+    <script>
+class pessoa {
+    constructor(nome){
+        this.nome = nome;
+}
+}
+
+let pessoa1 = new Pessoa("gab");
+console.log(pessoa1.constructor === Pessoa);
+
+    </script>
+
+    <script>
         let Tenis = class {
             constructor(modelo, cor){
                 this.modelo = modelo;
