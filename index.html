@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Tenis = class {
+            constructor(modelo, cor){
+                this.modelo = modelo;
+                this.cor = cor;
+            }
+            modeloDoTenis() {
+                return this.modelo;
+            }
+            set trocarModelo(novoModelo) {
+                this.modelo = novoModelo();
+            }
+            get obterModelo() {
+                return "O modelo do tênis é :" + this.modelo;
+        }
+    }
+
+        let allstar = new Tenis('All Star', 'preto');
+
+        allstar.trocarModelo = "All Star 2.0";
+        console.log(allstar.obterModelo);
+    </script>
+</body>
+</html>
